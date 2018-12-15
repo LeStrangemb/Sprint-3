@@ -4,26 +4,31 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace S1_BE_M06_Functies
+namespace Opdracht2
 {
     class Program
     {
-        private bool weekend()
-        {
-            DateTime date = DateTime.Now;
-            
-            return weekend();
-        }
-       
         static void Main(string[] args)
         {
-          
+           Console.Write(isWeekend());
+            Console.ReadLine();
+           
+         
+        }
+        public static string isWeekend()
+        {
+           DateTime now = DateTime.Now;
+            if ((now.ToString("dddd") == "Saturday") || (now.ToString("dddd") == "Sunday"))
             {
-                DateTime dt = DateTime.Now;
-                string dates = dt.ToString("yyyy-mm-dd");
-                Console.WriteLine(dates);
+                Console.Write("Het is geen weekend");
                 Console.ReadLine();
             }
+            else
+            {
+                Console.Write("Het is weekend");
+                Console.ReadLine();
+            }
+            return isWeekend();
         }
     }
 }
