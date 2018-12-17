@@ -10,17 +10,16 @@ namespace Opdracht5
     {
         static void Main(string[] args)
         {
-            Console.Write("Hoeveel lege regels wil je hebben?", regels);
-            Console.ReadLine();
+         while (legeRegels() > 10)
+            {
+                string resultaat = legeRegels;
+                Console.Write(resultaat);
+            }
         }
         public static int legeRegels()
         {
-            int regels = 0;
-            while (regels < 2)
-            {
-                Console.WriteLine();
-                Console.ReadKey();
-            }
+            Console.Write("Hoeveel lege regels wil je? ");
+            Console.ReadLine();
             return legeRegels();
         }
     }
